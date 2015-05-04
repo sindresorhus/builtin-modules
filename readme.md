@@ -31,6 +31,11 @@ Returns an array of builtin modules fetched from the running Node.js version.
 This module also comes bundled with a static array of builtin modules generated from the latest Node.js version. You can get it with `require('builtin-modules/static');`
 
 
+## Related
+
+- [is-builtin-module](https://github.com/sindresorhus/is-builtin-module) - Check if a string matches the name of a Node.js builtin module
+
+
 ## License
 
 MIT © [Sindre Sorhus](http://sindresorhus.com)
