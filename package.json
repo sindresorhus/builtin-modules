@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "node test.js",
+    "test": "xo && node test.js",
     "make": "node make.js"
   },
   "files": [
@@ -34,6 +34,7 @@
     "names"
   ],
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "0.0.4",
+    "xo": "*"
   }
 }
