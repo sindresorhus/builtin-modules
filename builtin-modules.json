@@ -17,6 +17,7 @@
 	"net",
 	"os",
 	"path",
+	"process",
 	"punycode",
 	"querystring",
 	"readline",
@@ -28,6 +29,7 @@
 	"tty",
 	"url",
 	"util",
+	"v8",
 	"vm",
 	"zlib"
 ]
