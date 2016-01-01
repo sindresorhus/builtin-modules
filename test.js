@@ -1,18 +1,14 @@
-'use strict';
-var test = require('ava');
-var builtinModules = require('./');
-var staticList = require('./static');
+import test from 'ava';
+import m from './';
+import m2 from './static';
 
-test(function (t) {
-	console.log('Builtin modules:', builtinModules);
+test(t => {
+	console.log('Builtin modules:', m);
 
-	t.doesNotThrow(function () {
-		builtinModules.forEach(function (el) {
-			require(el);
-		});
+	t.doesNotThrow(() => {
+		m.forEach(x => require(x));
 	});
 
-	t.true(builtinModules.indexOf('fs') !== -1);
-	t.true(Array.isArray(staticList));
-	t.end();
+	t.true(m.indexOf('fs') !== -1);
+	t.true(Array.isArray(m2));
 });
