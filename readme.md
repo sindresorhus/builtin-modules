@@ -17,7 +17,7 @@ $ npm install --save builtin-modules
 ```js
 var builtinModules = require('builtin-modules');
 
-console.log(builinModules);
+console.log(builtinModules);
 //=> ['assert', 'buffer', ...]
 ```
 
