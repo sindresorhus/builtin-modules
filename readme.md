@@ -8,14 +8,14 @@ The list is just a [JSON file](builtin-modules.json) and can be used wherever.
 ## Install
 
 ```
-$ npm install --save builtin-modules
+$ npm install builtin-modules
 ```
 
 
 ## Usage
 
 ```js
-var builtinModules = require('builtin-modules');
+const builtinModules = require('builtin-modules');
 
 console.log(builtinModules);
 //=> ['assert', 'buffer', ...]
@@ -38,4 +38,4 @@ This module also comes bundled with a static array of builtin modules generated 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

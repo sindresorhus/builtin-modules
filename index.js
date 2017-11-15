@@ -1,10 +1,9 @@
 'use strict';
-
-var blacklist = [
+const blacklist = [
 	'freelist',
 	'sys'
 ];
 
-module.exports = Object.keys(process.binding('natives')).filter(function (el) {
-	return !/^_|^internal|\//.test(el) && blacklist.indexOf(el) === -1;
-}).sort();
+module.exports = Object.keys(process.binding('natives'))
+	.filter(x => !/^_|^internal|\//.test(x) && blacklist.indexOf(x) === -1)
+	.sort();

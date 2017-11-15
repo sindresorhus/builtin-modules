@@ -1,5 +1,5 @@
 'use strict';
-var fs = require('fs');
-var builtinModules = require('./');
+const fs = require('fs');
+const builtinModules = require('.');
 
 fs.writeFileSync('builtin-modules.json', JSON.stringify(builtinModules, null, '\t') + '\n');

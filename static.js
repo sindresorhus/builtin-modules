@@ -1,2 +1,2 @@
 'use strict';
-module.exports = require('./builtin-modules.json');
+module.exports = require('./builtin-modules');
