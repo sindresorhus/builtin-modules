@@ -1,6 +1,6 @@
 import test from 'ava';
 import m2 from './static';
-import m from './';
+import m from '.';
 
 test(t => {
 	console.log('Builtin modules:', m);
