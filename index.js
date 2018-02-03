@@ -1,5 +1,4 @@
 'use strict';
-
 const builtinModules = require('module').builtinModules;
 
 const blacklist = [
