@@ -7,5 +7,5 @@ const blacklist = [
 ];
 
 module.exports = (builtinModules || Object.keys(process.binding('natives')))
-	.filter(x => !/^_|^internal|\//.test(x) && blacklist.indexOf(x) === -1)
+	.filter(x => !/^_|^(internal|v8|node-inspect)\/|\//.test(x) && blacklist.indexOf(x) === -1)
 	.sort();
