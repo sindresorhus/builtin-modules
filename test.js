@@ -1,16 +1,16 @@
 import test from 'ava';
-import m2 from './static';
-import m from '.';
+import builtinModulesStatic from './static';
+import builtinModules from '.';
 
-test(t => {
-	console.log('Builtin modules:', m);
+test('main', t => {
+	console.log('Builtin modules:', builtinModules);
 
 	t.notThrows(() => {
-		for (const x of m) {
+		for (const x of builtinModules) {
 			require(x);
 		}
 	});
 
-	t.true(m.indexOf('fs') !== -1);
-	t.true(Array.isArray(m2));
+	t.true(builtinModules.includes('fs'));
+	t.true(Array.isArray(builtinModulesStatic));
 });
