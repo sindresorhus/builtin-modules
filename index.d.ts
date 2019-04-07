@@ -6,7 +6,7 @@ List of the Node.js builtin modules.
 import builtinModules = require('builtin-modules');
 
 console.log(builtinModules);
-//=> ['assert', 'buffer', ...]
+//=> ['assert', 'buffer', …]
 ```
 */
 declare const builtinModules: readonly string[];
