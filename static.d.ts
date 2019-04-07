@@ -6,7 +6,7 @@ Static list of the Node.js builtin modules.
 import builtinModulesStatic = require('builtin-modules/static');
 
 console.log(builtinModulesStatic);
-//=> ['assert', 'buffer', ...]
+//=> ['assert', 'buffer', …]
 ```
 */
 declare const builtinModulesStatic: readonly string[];
