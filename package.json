@@ -13,12 +13,14 @@
 		"node": ">=6"
 	},
 	"scripts": {
-		"test": "xo && ava",
+		"test": "xo && ava && tsd",
 		"make": "node make.js"
 	},
 	"files": [
 		"index.js",
+		"index.d.ts",
 		"static.js",
+		"static.d.ts",
 		"builtin-modules.json"
 	],
 	"keywords": [
@@ -34,7 +36,8 @@
 		"names"
 	],
 	"devDependencies": {
-		"ava": "*",
-		"xo": "*"
+		"ava": "^1.4.1",
+		"tsd": "^0.7.2",
+		"xo": "^0.24.0"
 	}
 }
