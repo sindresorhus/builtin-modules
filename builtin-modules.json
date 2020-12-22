@@ -28,6 +28,7 @@
 	"repl",
 	"stream",
 	"string_decoder",
+	"sys",
 	"timers",
 	"tls",
 	"trace_events",
@@ -36,5 +37,7 @@
 	"util",
 	"v8",
 	"vm",
+	"wasi",
+	"worker_threads",
 	"zlib"
 ]
