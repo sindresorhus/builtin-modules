@@ -15,6 +15,7 @@
 	},
 	"scripts": {
 		"test": "xo && ava && tsd",
+		"test-on-all-versions": "./test-on-all-versions.sh",
 		"make": "node make.js"
 	},
 	"files": [

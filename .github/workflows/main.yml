@@ -10,14 +10,31 @@ jobs:
       fail-fast: false
       matrix:
         node-version:
+          - 18
+          - 17
+          - 16
           - 14
           - 12
           - 10
           - 8
+          # Note: not easy to setup GitHub Actions correctly in this case for Node 6, but you can run the tests locally (test-on-all-versions.sh)
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm test
+  test-static-list-is-up-to-date:
+    name: Static list is up-to-date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: latest
+      - run: npm install
+      - run: npm test
+      - run: mv builtin-modules.json builtin-modules-original.json
+      - run: npm run make
+      - run: diff builtin-modules.json builtin-modules-original.json
