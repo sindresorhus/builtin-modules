@@ -7,7 +7,7 @@ test('main', async t => {
 	await t.notThrowsAsync((async () => {
 		for (const builtinModule of builtinModules) {
 			// Only available in latest Node.js.
-			if (builtinModule === 'trace_events') {
+			if (builtinModule === 'trace_events' || builtinModule === 'inspector' || builtinModule === 'inspector/promises') {
 				continue;
 			}
 
