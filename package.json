@@ -1,7 +1,7 @@
 {
 	"name": "builtin-modules",
 	"version": "3.3.0",
-	"description": "List of the Node.js builtin modules",
+	"description": "A static list of the Node.js builtin modules from the latest Node.js version",
 	"license": "MIT",
 	"repository": "sindresorhus/builtin-modules",
 	"funding": "https://github.com/sponsors/sindresorhus",
@@ -10,18 +10,23 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
+	"exports": {
+		"types": "./index.d.ts",
+		"default": "./index.js"
+	},
+	"sideEffects": false,
 	"engines": {
-		"node": ">=6"
+		"node": ">=18.20"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd",
+		"//test": "xo && ava && tsd",
+		"test": "ava && tsd",
 		"make": "node make.js"
 	},
 	"files": [
 		"index.js",
 		"index.d.ts",
-		"static.js",
-		"static.d.ts",
 		"builtin-modules.json"
 	],
 	"keywords": [
@@ -37,8 +42,8 @@
 		"names"
 	],
 	"devDependencies": {
-		"ava": "^1.4.1",
-		"tsd": "^0.7.2",
-		"xo": "^0.24.0"
+		"ava": "^6.1.2",
+		"tsd": "^0.31.0",
+		"xo": "^0.58.0"
 	}
 }

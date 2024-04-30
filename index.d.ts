@@ -1,9 +1,9 @@
 /**
-List of the Node.js builtin modules.
+A static list of the Node.js builtin modules from the latest Node.js version.
 
 @example
 ```
-import builtinModules = require('builtin-modules');
+import builtinModules from 'builtin-modules';
 
 console.log(builtinModules);
 //=> ['assert', 'buffer', …]
@@ -11,4 +11,4 @@ console.log(builtinModules);
 */
 declare const builtinModules: readonly string[];
 
-export = builtinModules;
+export default builtinModules;

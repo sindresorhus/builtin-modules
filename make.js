@@ -1,5 +1,8 @@
-'use strict';
-const fs = require('fs');
-const builtinModules = require('.');
+import fs from 'node:fs';
+import {builtinModules} from 'node:module';
 
-fs.writeFileSync('builtin-modules.json', JSON.stringify(builtinModules, null, '\t') + '\n');
+const final = builtinModules
+	.filter(x => !/^_|^sys$/.test(x))
+	.sort();
+
+fs.writeFileSync('builtin-modules.json', JSON.stringify(final, undefined, '\t') + '\n');
