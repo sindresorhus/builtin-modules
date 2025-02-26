@@ -37,6 +37,6 @@ test('main', async t => {
 			name.startsWith('_')
 			|| name === 'sys'
 			|| name === 'punycode'
-			|| builtinModules.includes(name))
-	);
+			|| builtinModules.includes(name)
+	));
 });
