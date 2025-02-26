@@ -58,7 +58,7 @@ function buildList() {
 			: [],
 	);
 	const found = builtinModules
-		.filter(name => !existing.has(name) && !name.startsWith('_') && name !== 'sys')
+		.filter(name => !existing.has(name) && !name.startsWith('_'))
 		.flatMap(name =>
 			name.startsWith(NODE_PROTOCOL) ? [name] : [name, `${NODE_PROTOCOL}${name}`],
 		).filter(name => isBuiltin(name));

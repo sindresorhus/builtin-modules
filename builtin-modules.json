@@ -82,6 +82,8 @@
 	"stream/web",
 	"node:string_decoder",
 	"string_decoder",
+	"node:sys",
+	"sys",
 	"node:test",
 	"node:test/reporters",
 	"node:timers",
