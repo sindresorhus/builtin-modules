@@ -8,6 +8,7 @@ const LIST_FILE = 'builtin-modules.json';
 const NODE_PROTOCOL = 'node:';
 
 const stripNodeProtocol = name => name.startsWith(NODE_PROTOCOL) ? name.slice(NODE_PROTOCOL.length) : name;
+const deprecatedModules = new Set(['node:sys', 'node:punycode'].flatMap(name => [name, stripNodeProtocol(name)]));
 
 const sorter = (nameA, nameB) => {
 	const nameAWithoutProtocol = stripNodeProtocol(nameA);
@@ -61,7 +62,7 @@ function buildList() {
 		.filter(name => !existing.has(name) && !name.startsWith('_'))
 		.flatMap(name =>
 			name.startsWith(NODE_PROTOCOL) ? [name] : [name, `${NODE_PROTOCOL}${name}`],
-		).filter(name => isBuiltin(name));
+		).filter(name => isBuiltin(name) && !deprecatedModules.has(name));
 
 	if (found.length === 0) {
 		return;

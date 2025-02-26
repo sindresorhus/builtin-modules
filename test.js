@@ -20,9 +20,11 @@ test('main', async t => {
 		await t.notThrowsAsync(() => import(builtinModule), `Can't import '${builtinModule}'.`);
 	}
 
-	// Deprecated modules also included
-	t.true(builtinModules.includes('sys'));
-	t.true(builtinModules.includes('punycode'));
+	// Deprecated modules
+	t.false(builtinModules.includes('sys'));
+	t.false(builtinModules.includes('punycode'));
+	t.false(builtinModules.includes('node:sys'));
+	t.false(builtinModules.includes('node:punycode'));
 
 	t.true(Array.isArray(builtinModules));
 	t.true(builtinModules.includes('node:fs'));
@@ -30,5 +32,11 @@ test('main', async t => {
 	t.true(builtinModules.includes('node:test'));
 	t.false(builtinModules.includes('test'));
 
-	t.true(builtinModulesOnCurrentVersion.every(name => name.startsWith('_') || builtinModules.includes(name)));
+	t.true(builtinModulesOnCurrentVersion.every(
+		name =>
+			name.startsWith('_')
+			|| name === 'sys'
+			|| name === 'punycode'
+			|| builtinModules.includes(name))
+	);
 });

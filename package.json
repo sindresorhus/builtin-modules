@@ -20,7 +20,7 @@
 		"node": ">=18.20"
 	},
 	"scripts": {
-		"test": "xo --ignore index.js && ava && tsd",
+		"test": "xo && ava && tsd",
 		"test": "ava && tsd",
 		"make": "node make.js"
 	},
@@ -45,5 +45,8 @@
 		"ava": "^6.1.2",
 		"tsd": "^0.31.0",
 		"xo": "^0.60.0"
+	},
+	"xo":{
+		"ignore": ["index.js"]
 	}
 }
