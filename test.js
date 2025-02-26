@@ -15,6 +15,9 @@ test('main', async t => {
 		}
 	})());
 
-	t.true(builtinModules.includes('fs'));
 	t.true(Array.isArray(builtinModules));
+	t.true(builtinModules.includes('fs'));
+	t.true(builtinModules.includes('node:fs'));
+	t.true(builtinModules.includes('node:test'));
+	t.false(builtinModules.includes('test'));
 });
