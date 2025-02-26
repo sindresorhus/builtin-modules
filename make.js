@@ -60,9 +60,8 @@ function buildList() {
 	);
 	const found = builtinModules
 		.filter(name => !existing.has(name) && !name.startsWith('_'))
-		.flatMap(name =>
-			name.startsWith(NODE_PROTOCOL) ? [name] : [name, `${NODE_PROTOCOL}${name}`],
-		).filter(name => isBuiltin(name) && !deprecatedModules.has(name));
+		.flatMap(name => name.startsWith(NODE_PROTOCOL) ? [name] : [name, `${NODE_PROTOCOL}${name}`])
+		.filter(name => !deprecatedModules.has(name) && isBuiltin(name));
 
 	if (found.length === 0) {
 		return;
