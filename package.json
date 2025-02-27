@@ -1,6 +1,6 @@
 {
 	"name": "builtin-modules",
-	"version": "4.0.0",
+	"version": "5.0.0",
 	"description": "A static list of the Node.js builtin modules from the latest Node.js version",
 	"license": "MIT",
 	"repository": "sindresorhus/builtin-modules",
@@ -20,7 +20,6 @@
 		"node": ">=18.20"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd",
 		"test": "ava && tsd",
 		"make": "node make.js"
 	},
@@ -46,7 +45,7 @@
 		"tsd": "^0.31.2",
 		"xo": "^0.60.0"
 	},
-	"xo":{
+	"xo": {
 		"ignore": [
 			"index.js"
 		]
