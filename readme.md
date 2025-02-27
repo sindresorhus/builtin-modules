@@ -16,7 +16,7 @@ npm install builtin-modules
 import builtinModules from 'builtin-modules';
 
 console.log(builtinModules);
-//=> ['assert', 'buffer', …]
+//=> ['node:assert', 'assert', 'node:buffer', 'buffer', …]
 ```
 
 ## Tip
