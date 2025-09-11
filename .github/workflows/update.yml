@@ -20,9 +20,12 @@ jobs:
           check-latest: true
           node-version: latest
       - run: node make.js --incremental
+      - run: |
+          echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> "$GITHUB_ENV"
+          echo "NODE_VERSION=$(node --version)" >> "$GITHUB_ENV"
       - uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: Update
-          branch: automated-update
+          commit-message: Add Node.js ${{ env.NODE_VERSION }} modules
+          branch: automated-update-${{ env.CURRENT_DATE }}
           branch-suffix: timestamp
-          title: Update
+          title: Add Node.js ${{ env.NODE_VERSION }} modules
