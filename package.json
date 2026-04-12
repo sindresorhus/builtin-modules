@@ -1,6 +1,6 @@
 {
 	"name": "builtin-modules",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"description": "A static list of the Node.js builtin modules from the latest Node.js version",
 	"license": "MIT",
 	"repository": "sindresorhus/builtin-modules",
