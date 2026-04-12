@@ -74,6 +74,8 @@
 	"stream",
 	"node:stream/consumers",
 	"stream/consumers",
+	"node:stream/iter",
+	"stream/iter",
 	"node:stream/promises",
 	"stream/promises",
 	"node:stream/web",
@@ -107,5 +109,7 @@
 	"node:worker_threads",
 	"worker_threads",
 	"node:zlib",
-	"zlib"
+	"zlib",
+	"node:zlib/iter",
+	"zlib/iter"
 ]
