@@ -29,6 +29,7 @@
 	"domain",
 	"node:events",
 	"events",
+	"node:ffi",
 	"node:fs",
 	"fs",
 	"node:fs/promises",
