@@ -103,6 +103,7 @@
 	"util/types",
 	"node:v8",
 	"v8",
+	"node:vfs",
 	"node:vm",
 	"vm",
 	"node:wasi",
