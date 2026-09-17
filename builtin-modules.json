@@ -5,6 +5,8 @@
 	"assert/strict",
 	"node:async_hooks",
 	"async_hooks",
+	"node:bench",
+	"node:bench/reporters",
 	"node:buffer",
 	"buffer",
 	"node:child_process",
