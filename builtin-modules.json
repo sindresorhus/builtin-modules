@@ -50,6 +50,8 @@
 	"module",
 	"node:net",
 	"net",
+	"node:net/promises",
+	"net/promises",
 	"node:os",
 	"os",
 	"node:path",
